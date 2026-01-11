@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import UniverseBG from "../components/UniverseBG";
 import MemberButton from "../components/MemberButton";
+import Portfolio from "./Portfolio";
+
 import "./home.css";
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="homee">
         <UniverseBG />
 
       <section className="heroo">
@@ -74,6 +76,7 @@ export default function Home() {
             <MemberButton name="Mohd. Sami" link="/Sami/index.html" />
             <MemberButton name="Vasu Garg" link="/vasu/index.html" />
             <MemberButton name="Nikhil" link="/nikhil" />
+            <MemberButton name="Jiya Agrawal" link="/portfolio" />
           </div>
         </motion.div>
       </section>

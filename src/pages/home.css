@@ -4,12 +4,12 @@
 
 body {
   margin: 0;
-  background: black;
+  background: transparent;
   color: white;
   font-family: Inter, system-ui, sans-serif;
 }
 
-.home {
+.homee {
   min-height: 100vh;
 }
 

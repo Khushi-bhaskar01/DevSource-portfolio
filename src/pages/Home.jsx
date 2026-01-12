@@ -56,7 +56,7 @@ export default function Home() {
             name="Krrish Khowal"
             role="VICE LEAD"
             img="/vice_lead.JPG"
-            link="/team/krrish-khowal"
+            link="https://www.linkedin.com/in/krrish-khowal-150885311/"
           />
         </div>
       </section>
@@ -73,11 +73,12 @@ export default function Home() {
 
           <div className="members-buttons">
             <MemberButton name="Atharv Handa" link="/atharv" />
-            <MemberButton name="Mohd. Sami" link="/Sami/index.html" />
-            <MemberButton name="Vasu Garg" link="/vasu/index.html" />
+            <MemberButton name="Mohd. Sami" link="https://samicode.netlify.app/" />
+            <MemberButton name="Vasu Garg" link="https://portfolio-vasug.netlify.app/" />
             <MemberButton name="Nikhil" link="/nikhil" />
             <MemberButton name="Jiya Agrawal" link="/jiya" />
-            <MemberButton name="Himanshu Singh Dangi" link="/Himanshu" />
+            <MemberButton name="Vinit Tiwari" link="/Vinit" />
+            <MemberButton name="Himanshu Singh" link="https://portfolio-gules-two-28.vercel.app/" />
           </div>
         </motion.div>
       </section>

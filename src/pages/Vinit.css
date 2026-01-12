@@ -1,0 +1,151 @@
+:root {
+  --charcoal: #0a0a0a;
+  --turmeric: #FFC300;
+  --glow: rgba(255, 195, 0, 0.3);
+}
+
+.vinit-body {
+  background-color: var(--charcoal);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  position: relative;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 195, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 195, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.vinit-container {
+  max-width: 900px;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.glitch-text {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--turmeric);
+  text-shadow: 0 0 15px var(--glow);
+  margin: 0;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 9px solid var(--turmeric);
+  width: fit-content;
+  animation: typing 3s steps(25), blink 0.8s infinite;
+}
+
+@keyframes typing { from { width: 0 } to { width: 60% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+.turmeric-divider {
+  height: 2px;
+  width: 150px;
+  background: var(--turmeric);
+  margin: 15px 0;
+  box-shadow: 0 0 10px var(--turmeric);
+}
+
+.glow-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 195, 0, 0.1);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.glow-card:hover {
+  border-color: var(--turmeric);
+  background: rgba(255, 195, 0, 0.05);
+  box-shadow: 0 0 20px rgba(255, 195, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-corner {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--turmeric);
+  border-right: 2px solid var(--turmeric);
+}
+
+.project-item {
+  margin-bottom: 40px;
+}
+
+.project-image {
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba(255, 195, 0, 0.2);
+}
+
+.link-container {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-yellow {
+  color: var(--turmeric);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--turmeric);
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.contact-yellow:hover {
+  background: var(--turmeric);
+  color: black;
+  box-shadow: 0 0 15px var(--glow);
+}
+
+.skill-pills span {
+  display: inline-block;
+  border: 1px solid var(--turmeric);
+  color: var(--turmeric);
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.thanks-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright-text {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .glitch-text { font-size: 2.5rem; }
+  .link-container { flex-direction: column; }
+}

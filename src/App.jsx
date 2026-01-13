@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Khushi from "./pages/Khushi";
 import Atharv from "./pages/Atharv";
 import Nikhil from "./pages/Nikhil";
+import Suraj from "./pages/Suraj";
 import Portfolio from './pages/Portfolio';
 
 function App() {
@@ -46,6 +47,12 @@ function App() {
           </div>
         }
       />
+
+      <Route
+        path="/Suraj"
+        element={<Suraj />}
+      />
+
     </Routes>
   );
 }

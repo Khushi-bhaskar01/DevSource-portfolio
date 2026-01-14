@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Sagar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0c1622;
+            --bg-panel: #172433;
+            --bg-card: #2b3743;
+            --text-primary: #dfe9f2;
+            --text-muted: #9aa4b2;
+            --accent: #5eead4;
+            --accent-dark: #15363f;
+            --border: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .main-panel {
+            background: var(--bg-panel);
+            border-radius: 12px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .hero-content {
+            padding-top: 20px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            mix-blend-mode: lighten;
+            filter: brightness(1.05) contrast(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-name {
+            font-size: clamp(2.5rem, 8vw, 6.5rem);
+            line-height: 0.95;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            word-break: break-word;
+        }
+
+        .hero-bio {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .hero-bio strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .social-links {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 0;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            line-height: 0.9;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            transform: translateX(15px);
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin: 0 -20px;
+            padding: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card {
+            flex: 0 0 min(320px, 85vw);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(94, 234, 212, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--bg-card);
+        }
+
+        .project-content {
+            padding: 24px;
+        }
+
+        .project-content h4 {
+            font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .project-content p {
+            color: var(--text-muted);
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--accent-dark);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-color: var(--accent);
+        }
+
+        .carousel-btn.prev {
+            left: 0;
+        }
+
+        .carousel-btn.next {
+            right: 0;
+        }
+
+        .education-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--accent);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .education-card h4 {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--accent);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .education-card .year {
+            color: var(--text-muted);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            margin-bottom: 15px;
+        }
+
+        .education-card .courses {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .skills {
+            position: relative;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding: 5rem 2rem;
+        }
+
+        .skills h2 {
+            color: var(--accent);
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .skills p.subtitle {
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.15);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-primary);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-left: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #ccc;
+            margin-bottom: 30px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 10px;
+        }
+
+        input,
+        textarea {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 12px;
+            color: #fff;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            width: 100%;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #00ff99;
+            box-shadow: 0 0 10px #00ff99;
+            outline: none;
+        }
+
+        button {
+            background: #00ff99;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            color: #000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        button:hover {
+            box-shadow: 0 0 15px #00ff99;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            padding: 40px 0 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        /* Tablet breakpoint */
+        @media (max-width: 1024px) {
+            .main-panel {
+                padding: 40px 30px;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                max-width: 450px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .social-links {
+                padding: 50px 0;
+            }
+        }
+
+        /* Mobile breakpoint */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            .main-panel {
+                padding: 30px 20px;
+                border-radius: 8px;
+            }
+
+            .hero {
+                margin-bottom: 40px;
+                gap: 30px;
+            }
+
+            .hero-image img {
+                max-width: 350px;
+            }
+
+            .hero-name {
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .social-links {
+                padding: 40px 0;
+                gap: 10px;
+            }
+
+            .social-link {
+                padding: 15px 0;
+                letter-spacing: 1px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .carousel-container {
+                margin: 0 -10px;
+                padding: 15px 10px;
+            }
+
+            .project-card {
+                flex: 0 0 min(300px, 90vw);
+            }
+
+            .education-card {
+                padding: 20px;
+            }
+
+            .skills {
+                padding: 3rem 1rem;
+            }
+
+            .skill-grid {
+                gap: 1rem;
+            }
+
+            .skill-card {
+                padding: 1.2rem 1.5rem;
+            }
+        }
+
+        /* Small mobile breakpoint */
+        @media (max-width: 480px) {
+            .main-panel {
+                padding: 20px 15px;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .hero-name {
+                letter-spacing: 0.5px;
+            }
+
+            .label {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+
+            .social-link {
+                padding: 10px 0;
+                gap: 5px;
+            }
+
+            .social-link:hover {
+                transform: translateX(8px);
+            }
+
+            .section-title {
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .carousel-track {
+                gap: 16px;
+            }
+
+            .project-card {
+                flex: 0 0 min(280px, 95vw);
+            }
+
+            .project-image {
+                height: 180px;
+            }
+
+            .project-content {
+                padding: 20px;
+            }
+
+            .project-tags {
+                gap: 6px;
+            }
+
+            .tag {
+                padding: 5px 12px;
+            }
+
+            .education-card {
+                padding: 20px 15px;
+            }
+
+            .skills {
+                padding: 2.5rem 0.5rem;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .skill-card {
+                padding: 1.2rem;
+            }
+
+            form {
+                padding: 0 5px;
+                gap: 12px;
+            }
+
+            input,
+            textarea,
+            button {
+                padding: 10px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 360px) {
+            .container {
+                padding: 15px 8px;
+            }
+
+            .main-panel {
+                padding: 15px 12px;
+            }
+
+            .project-card {
+                flex: 0 0 100%;
+            }
+
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-card);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main class="main-panel">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="label">Human Name:</div>
+                    <h1 class="hero-name">MAYANK<br>SAGAR</h1>
+                    <p class="hero-bio">
+                        I'm just a guy who codes like he's running out of time—because maybe I am. No grand destiny, no
+                        chosen one—just me, a deadline, and the will to win.
+                        <br><br>
+                        <strong>A Beginner web developer, obsessed with making frontends look way too good.</strong>
+                        <br><br>
+                        Outside of coding, I like spending time gaming online and relaxing.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="tech-avatar1.png" alt="Tech Developer Illustration">
+                </div>
+            </section>
+
+            <section class="social-links">
+                <a href="https://www.linkedin.com/in/mayank-sagar-93ab06384/" class="social-link" target="_blank">
+                    <span>LINKEDIN</span>
+                </a>
+                <a href="https://github.com/MayankSagar16" class="social-link" target="_blank">
+                    <span>GITHUB</span>
+                </a>
+            </section>
+
+            <section class="projects">
+                <div class="projects-header">
+                    <h2 class="section-title">Interesting Projects</h2>
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Previous">‹</button>
+                    <div class="carousel-track">
+                        <a href="https://web-dev-mytask.netlify.app/" target="_blank" class="project-card">
+                            <img src="project-to-do.jpg"To-Do App class="project-image">
+                            <div class="project-content">
+                                <h4>To-Do App</h4>
+                                <p>A full-fledged webpage for managing customers and admin.</p>
+                                <div class="project-tags">
+                                    <span class="tag">CRUD Operations</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://e-commerce-website-dun-three.vercel.app/" target="_blank" class="project-card">
+                            <img src="project2.png" alt="Maison" class="project-image">
+                            <div class="project-content">
+                                <h4>Maison</h4>
+                                <p>E commerce platform for all kinds of goods.</p>
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Responsive Web Design</span>
+                                    <span class="tag">AI</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://my-weather-app-03.netlify.app/" target="_blank" class="project-card">
+                            <img src="project-weather.jpg" alt="Weather App" class="project-image">
+                            <div class="project-content">
+                                <h4>Weather-App</h4>
+                                <p>An AI powered tool helps to recycle, reuse and donate items</p>
+                                <div class="project-tags">
+                                    <span class="tag">API</span>
+                                    <span class="tag">DOM</span>
+                                    <span class="tag">Responsive Design</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next">›</button>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card">
+                    <h4>B.Tech in Computer Science and Engineering with Data Science</h4>
+                    <p class="year">University School of Information, Communication and Technology (2025 - 2029)</p>
+                    <p class="courses">
+                        <strong>Key Courses:</strong> Data Structures and Algorithms • Web Development • Database
+                        Management • Machine Learning • Software Engineering • Statistics
+                    </p>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2>Capabilities Console</h2>
+                <p class="subtitle">A curated collection of my technical skills and interests.</p>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <ul class="skill-list">
+                            <li>React <span class="dot"></span></li>
+                            <li>Tailwind CSS <span class="dot"></span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Backend (Learning)</h3>
+                        <ul class="skill-list">
+                            <li>Node.js <span class="dot"></span></li>
+                            <li>Express.js <span class="dot"></span></li>
+                            <li>MongoDB <span class="dot"></span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Tools</h3>
+                        <ul class="skill-list">
+                            <li>Git & Github <span class="dot"></span></li>
+                            <li>Figma <span class="dot"></span></li>
+                            <li>Photoshop <span class="dot"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2>Connect With Me</h2>
+                <p>Have a project idea or a query? Let's talk.</p>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required />
+                    <input type="email" id="email" placeholder="Your Email" required />
+                    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <footer>
+                <p>© 2026 Mayank • Built with passion and code</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        const track = document.querySelector(".carousel-track");
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector(".next");
+        const prevButton = document.querySelector(".prev");
+
+        let index = 0;
+        const firstClone = slides[0].cloneNode(true);
+        const secondClone = slides[1].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+        const secondLastClone = slides[slides.length - 2].cloneNode(true);
+
+        track.appendChild(firstClone);
+        track.appendChild(secondClone);
+        track.insertBefore(lastClone, slides[0]);
+        track.insertBefore(secondLastClone, slides[0]);
+
+        let allSlides = Array.from(track.children);
+        let slideWidth;
+
+        function updateSlideWidth() {
+            slideWidth = allSlides[0].getBoundingClientRect().width + 24;
+        }
+        window.addEventListener("resize", updateSlideWidth);
+        updateSlideWidth();
+
+        index = 2;
+        track.style.transform = `translateX(${-index * slideWidth}px)`;
+
+        function moveCarousel() {
+            track.style.transition = "transform 0.6s ease";
+            track.style.transform = `translateX(${-index * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener("click", () => {
+            if (index >= allSlides.length - 2) return;
+            index++;
+            moveCarousel();
+        });
+
+        prevButton.addEventListener("click", () => {
+            if (index <= 0) return;
+            index--;
+            moveCarousel();
+        });
+
+        track.addEventListener("transitionend", () => {
+            if (allSlides[index].isSameNode(firstClone)) {
+                track.style.transition = "none";
+                index = 2;
+                track.style.transform = `translateX(${-index * slideWidth}px)`;
+            } else if (allSlides[index].isSameNode(lastClone)) {
+                track.style.transition = "none";
+                index = allSlides.length - 4;
+                track.style.transform = `translateX(${-index * slideWidth}px)`;
+            }
+        });
+
+        let autoSlideInterval = setInterval(() => {
+            index++;
+            moveCarousel();
+        }, 3000);
+
+        // Pause auto-slide on hover
+        track.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        track.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(() => {
+                index++;
+                moveCarousel();
+            }, 3000);
+        });
+
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const mailtoLink = `mailto:manushwi.test@gmail.com?subject=Query from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+
+</html>

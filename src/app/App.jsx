@@ -302,7 +302,7 @@ export default function App() {
                 />
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border-4 border-gray-800">
                   <ImageWithFallback
-                    src="./Arnav Website photo.jpeg"
+                    src=".../public/Arnav Website photo.jpeg"
                     alt="Arnav"
                     className="w-full h-full object-cover"
                   />

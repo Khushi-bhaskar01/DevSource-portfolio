@@ -78,6 +78,8 @@ export default function Home() {
             <MemberButton name="Nikhil" link="/nikhil" />
             <MemberButton name="Jiya Agrawal" link="/jiya" />
             <MemberButton name="Vinit Tiwari" link="/Vinit" />
+            <MemberButton name="Arnav Kumar Gupta" link="https://arnav-portfolio-chi.vercel.app/" />
+
           </div>
         </motion.div>
       </section>

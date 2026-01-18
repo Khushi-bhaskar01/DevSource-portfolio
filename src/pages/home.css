@@ -261,3 +261,120 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* =========================
+   RESPONSIVE STYLES
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .heroo h1 {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .hero-desc {
+    max-width: 90%;
+  }
+
+  .team-grid {
+    gap: 80px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .heroo {
+    padding: 0 16px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .heroo h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .glitch {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .team {
+    padding: 70px 0 100px;
+  }
+
+  .team h2 {
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .image-wrap {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-wrap img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .members {
+    padding: 70px 0 110px;
+  }
+
+  .members h3 {
+    font-size: 1.8rem;
+  }
+
+  .members-buttons {
+    gap: 14px;
+    padding: 0 16px;
+  }
+
+  .member-btn {
+    min-width: unset;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .heroo h1 {
+    font-size: 2rem;
+  }
+
+  .glitch {
+    font-size: 1.9rem;
+  }
+
+  .hero-desc {
+    font-size: 0.85rem;
+  }
+
+  .team h2,
+  .members h3 {
+    font-size: 1.6rem;
+  }
+
+  .profile-btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}

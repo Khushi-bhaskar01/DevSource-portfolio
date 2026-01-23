@@ -289,6 +289,7 @@ export default function Khushi() {
             <div className="skill-pill">Framer Motion</div>
             <div className="skill-pill">Tailwind css</div>
             <div className="skill-pill">Figma</div>
+            <div className="skill-pill">GSAP</div>
             <div className="skill-pill">Open Source</div>
             <div className="skill-pill">Project Management</div>
             <div className="skill-pill">Git & GitHub</div>

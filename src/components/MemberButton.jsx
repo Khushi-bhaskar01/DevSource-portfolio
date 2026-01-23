@@ -1,18 +1,18 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import React from "react";
+import "./memberButton.css";
 
-const MotionLink = motion(Link);
-
-export default function MemberButton({ name, link }) {
+const MemberButton = ({ name, link }) => {
   return (
-    <MotionLink
-      to={link}
-      className="member-btn"
-      whileHover={{ scale: 1.06 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 220 }}
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ds-member-btn"
     >
-      {name}
-    </MotionLink>
+      <span className="ds-member-name">{name}</span>
+      <span className="ds-member-arrow">↗</span>
+    </a>
   );
-}
+};
+
+export default MemberButton;

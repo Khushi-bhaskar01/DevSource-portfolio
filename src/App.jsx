@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Khushi from "./pages/Khushi";
 import Atharv from "./pages/Atharv";
+import Akash from "./pages/Akash";
 import Nikhil from "./pages/Nikhil";
 import Suraj from "./pages/Suraj";
 import Vinit from "./pages/Vinit";
@@ -42,6 +43,16 @@ function App() {
         element={
           <div className="portfolio-nikhil">
             <Nikhil />
+          </div>
+        }
+      />
+
+      {/* AKASH */}
+      <Route
+        path="/akash"
+        element={
+          <div className="portfolio-akash">
+            <Akash />
           </div>
         }
       />

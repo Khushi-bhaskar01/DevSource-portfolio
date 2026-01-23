@@ -10,7 +10,7 @@
   background: transparent;
 }
 
-.heroo::after {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -125,7 +125,9 @@
   margin-top: 40px;
   font-size: 3rem;
   background: linear-gradient(90deg, #edbdee, #95ddee);
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
   font-family:'Courier New', Courier, monospace;
 }
@@ -196,9 +198,9 @@
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 60px;
   background: linear-gradient(135deg, #8a5cff 0%, #33d6ff 50%, #ff7700 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-weight: 600;
   text-shadow: 0 0 40px rgba(138,92,255,0.3);
   font-family:'Courier New', Courier, monospace
@@ -266,6 +268,7 @@
 
 .highlight-purple {
   background: linear-gradient(135deg, #8a5cff, #33d6ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -273,6 +276,7 @@
 
 .highlight-orange {
   background: linear-gradient(135deg, #ff7700, #ffaa00);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -325,9 +329,11 @@
   font-weight: 600;
   margin-bottom: 50px;
   background: linear-gradient(90deg, #8a5cff, #33d6ff);
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
-  font-family:'Courier New', Courier, monospace
+  font-family:'Courier New', Courier, monospace;
 }
 
 .skills-wrap {
@@ -427,6 +433,7 @@
   font-size: 2.6rem;
   margin-bottom: 70px;
   background: linear-gradient(90deg, #ffffff, #ffffff);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-family:'Courier New', Courier, monospace
@@ -510,6 +517,7 @@
   font-size: 3.6rem;
   margin-bottom: 80px;
   background: linear-gradient(90deg, #8a5cff, #33d6ff);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-family: 'Courier New', Courier, monospace;
@@ -573,22 +581,22 @@
 }
 
 .timeline-card {
-  background: rgba(225, 222, 222, 0.129);
+  background: rgba(212, 179, 206, 0.719);
   backdrop-filter: blur(18px) saturate(150%);
   border-radius: 22px;
   padding: 28px 32px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(203, 72, 190, 0.2);
 }
 .timeline-card:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(225, 183, 214, 0.836);
   box-shadow:
-    0 20px 45px rgba(157, 221, 237, 0.25),
+    0 20px 45px rgba(70, 191, 215, 0.25),
     inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .timeline-phase {
-  font-size: 0.8rem;
-  color: #ff7700;
+  font-size: 0.9rem;
+  color: #0033ff;
 }
 
 @media (max-width: 768px) {

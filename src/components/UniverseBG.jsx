@@ -16,8 +16,16 @@ export default function UniverseBG() {
   }, []);
 
   return (
-    <div className="universe-bg">
-      <svg width="100%" height="100%">
+    <div className="universe-bg" style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      zIndex: 0,
+      pointerEvents: 'none'
+    }}>
+      <svg width="100%" height="100%" style={{ display: 'block' }}>
         {/* stars */}
         {stars.map((star, i) => (
           <motion.circle

@@ -581,22 +581,22 @@
 }
 
 .timeline-card {
-  background: rgba(188, 186, 186, 0.412);
+  background: rgba(212, 179, 206, 0.719);
   backdrop-filter: blur(18px) saturate(150%);
   border-radius: 22px;
   padding: 28px 32px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(203, 72, 190, 0.2);
 }
 .timeline-card:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(225, 183, 214, 0.836);
   box-shadow:
-    0 20px 45px rgba(157, 221, 237, 0.25),
+    0 20px 45px rgba(70, 191, 215, 0.25),
     inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .timeline-phase {
-  font-size: 0.8rem;
-  color: #ff7700;
+  font-size: 0.9rem;
+  color: #0033ff;
 }
 
 @media (max-width: 768px) {

@@ -5,8 +5,8 @@ const MemberButton = ({ name, link }) => {
   return (
     <a
       href={link}
-      target={link.startsWith("http") ? "_blank" : "_self"}
-      rel="noreferrer"
+      target="_blank"
+      rel="noopener noreferrer"
       className="ds-member-btn"
     >
       <span className="ds-member-name">{name}</span>

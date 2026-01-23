@@ -178,7 +178,7 @@ const Home = () => {
       <div className="content-section" ref={contentRef}>
         <div className="content-inner">
           <section className="about-main">
-            <h2 className="content-title">Welcome to DevSource Universe</h2>
+            <h2 className="content-title ds-heading">Welcome to DevSource Universe</h2>
 
             <p className="content-text reveal-text">
               We bridge the gap between learning & real-world development
@@ -190,7 +190,7 @@ const Home = () => {
               systems, the journey matters as much as the result.
             </p>
             <section className="leadership-section">
-              <h3 className="leadership-heading">Leadership</h3>
+              <h3 className="leadership-heading ds-heading">Leadership</h3>
          
                <div className="leadership-cards">
                  <LeaderCard
@@ -211,7 +211,7 @@ const Home = () => {
 
             {/* ================= TEAM MEMBERS ================= */}
             <section className="team-section">
-              <h3 className="team-heading">Team Members</h3>
+              <h3 className="team-heading ds-heading">Team Members</h3>
             
               <div className="members-buttons">
                 <MemberButton name="Atharv Handa" link="/atharv" />

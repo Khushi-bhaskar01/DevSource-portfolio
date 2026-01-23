@@ -308,3 +308,59 @@
     gap: 24px;
   }
 }
+/* ================= GLOBAL SECTION HEADINGS ================= */
+
+.ds-heading {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffd29d 30%,
+    #ff8a00 55%,
+    #ff3d81 75%,
+    #7cf7ff 100%
+  );
+
+  background-size: 300% 300%;
+  animation: dsGradientFlow 6s ease infinite;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* soft glow */
+.ds-heading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: blur(28px);
+  opacity: 0.35;
+  background: inherit;
+  z-index: -1;
+}
+
+@keyframes dsGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.content-title {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  margin-bottom: 24px;
+}
+.team-heading {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+}
+.leadership-heading {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+}
+.content-title {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  margin-bottom: 24px;
+}

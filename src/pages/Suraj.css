@@ -1,0 +1,428 @@
+
+.suraj-wrapper {
+  min-height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 80px;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav li:hover {
+  color: #ff7a18;
+}
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 120px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  padding-top: 160px; 
+  padding-bottom: 100px;
+}
+
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-left h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+.hero-left h1 span {
+  color: #ff7a18;
+}
+
+.hero-left h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+.dynamic-text {
+  color: #ff7a18;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;      
+  margin-top: 22px;
+}
+
+.btn {
+  height: 40px;
+  padding: 0 22px;
+
+  display: inline-flex;       
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: #111;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(255, 122, 24, 0.45);
+}
+
+
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 122, 24, 0.5);
+}
+
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-right img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-right::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(255,122,24,0.35), transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+
+.skills {
+  text-align: center;
+  padding: 80px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 20px;
+}
+
+.contact-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+
+  text-align: center;
+  padding: 50px 40px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: -25px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 122, 24, 0.3),
+    transparent 70%
+  );
+  filter: blur(55px);
+  z-index: -1;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  white-space: nowrap; 
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.contact-btn {
+  min-width: 130px;
+}
+
+.contact-btn.linkedin:hover {
+  box-shadow: 0 0 28px rgba(10, 102, 194, 0.85);
+}
+
+.contact-btn.email:hover {
+  box-shadow: 0 0 28px rgba(255, 122, 24, 0.85);
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 45px 30px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 16px 30px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 60px;
+    padding-top: 140px;
+  }
+
+  .hero-right img {
+    width: 300px;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.skill-card.html:hover {
+  box-shadow: 0 0 25px rgba(255, 72, 72, 0.9);
+}
+
+
+.skill-card.css:hover {
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.9);
+}
+
+.skill-card.javascript:hover {
+  box-shadow: 0 0 25px rgba(255, 223, 0, 0.9);
+}
+
+.skill-card.react:hover {
+  box-shadow: 0 0 28px rgba(97, 218, 251, 0.95);
+}
+
+.skill-card.c:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+}
+
+.skill-card.java:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.galaxy-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  will-change: transform;
+}
+
+.suraj-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+.stars {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.stars-far {
+  opacity: 0.55;
+  filter: blur(1px);
+}
+
+.stars-mid {
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1.5px 1.5px at 80% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 70%, white, transparent);
+  opacity: 0.6;
+}
+
+.stars-near {
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, white, transparent),
+    radial-gradient(2px 2px at 70% 60%, white, transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, white, transparent);
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+.suraj-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

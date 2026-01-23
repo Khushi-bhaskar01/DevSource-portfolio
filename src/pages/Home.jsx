@@ -142,6 +142,77 @@ const Home = () => {
         <UniverseBG />
       </div>
 
+      <section className="heroo">
+        <motion.h1
+          className="glitch hero-title"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <span aria-hidden="true">DevSource</span>
+          Dev<span className="accentt">Source</span>
+          <span aria-hidden="true">DevSource</span>
+        </motion.h1>
+
+        <motion.p
+         className="hero-desc"
+         initial={{ opacity: 0, y: 10 }}
+         animate={{ opacity: 0.6, y: 0 }}
+         transition={{ delay: 0.3 }}
+       >
+         DevSource is a platform built by{" "}
+         <span className="accent">developers</span>, for{" "}
+         <span className="accent">developers</span>. We bridge the gap between{" "}
+         <span className="accent">learning</span> and{" "}
+         <span className="accent">real-world development</span> through{" "}
+         <span className="accent">project-based learning</span>,{" "}
+         <span className="accent">open-source culture</span>, and{" "}
+         <span className="accent">collaborative growth</span>. This platform showcases
+         the people behind <span className="accent">DevSource</span> and their{" "}
+         <span className="accent">contributions</span>.
+        </motion.p>
+
+      </section>
+
+      <section className="team">
+        <h2>Leadership</h2>
+
+        <div className="team-grid">
+          <LeaderCard
+            name="Khushi Bhaskar"
+            role="LEAD"
+            img="/khushi.JPG"
+            link="/khushi"
+          />
+          <LeaderCard
+            name="Krrish Khowal"
+            role="VICE LEAD"
+            img="/vice_lead.JPG"
+            link="https://www.linkedin.com/in/krrish-khowal-150885311/"
+          />
+        </div>
+      </section>
+
+      <section className="members">
+        <motion.div
+          className="members-wrapper"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3>Team Members</h3>
+
+          <div className="members-buttons">
+            <MemberButton name="Atharv Handa" link="/atharv" />
+            <MemberButton name="Mohd. Sami" link="https://samicode.netlify.app/" />
+            <MemberButton name="Vasu Garg" link="https://portfolio-vasug.netlify.app/" />
+            <MemberButton name="Nikhil" link="/nikhil" />
+            <MemberButton name="Jiya Agrawal" link="/jiya" />
+            <MemberButton name="Vinit Tiwari" link="/Vinit" />
+            <MemberButton name="Himanshu Singh" link="https://portfolio-gules-two-28.vercel.app/" />
+            <MemberButton name="Suraj" link="https://dev-source-portfolio-lovat.vercel.app/Suraj"/>
+
       {/* HERO */}
       <div className="hero-wrapper">
         <div className="sticky-hero">
@@ -163,6 +234,7 @@ const Home = () => {
               A platform built by <span>developers</span>, for{" "}
               <span>developers</span>
             </p>
+
           </div>
 
           <img

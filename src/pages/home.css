@@ -273,6 +273,7 @@
 .leadership-section {
   margin-top: 120px;
   text-align: center;
+  
 }
 
 .leadership-heading {
@@ -288,8 +289,14 @@
 .leadership-cards {
   display: flex;
   justify-content: center;
+
+  gap: 20px;
+
   gap: 40px;
+
   flex-wrap: wrap;
+  max-width: 1200px;      /* ⭐ KEY FIX */
+  margin: 0 auto;
 }
 
 /* ================= MOBILE ================= */

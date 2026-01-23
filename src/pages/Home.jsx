@@ -226,6 +226,7 @@ const Home = () => {
                 <MemberButton name="Arnav Kumar Gupta" link="https://arnav-portfolio-chi.vercel.app/" />
                 <MemberButton name="Mayank Sagar" link="https://my-portfolio-page-16.netlify.app/" />
                 <MemberButton name="Anshu Kumar" link="https://anshu-portfolio-sable.vercel.app/" />
+                <MemberButton name="Suraj" link="https://dev-source-portfolio-lovat.vercel.app/Suraj" />
               </div>
             </section>
             

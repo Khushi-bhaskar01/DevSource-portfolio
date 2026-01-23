@@ -1,5 +1,5 @@
 import React from "react";
-import "./leaderCard.css";
+import "./LeaderCard.css";
 
 const LeaderCard = ({ name, role, img, link }) => {
   return (

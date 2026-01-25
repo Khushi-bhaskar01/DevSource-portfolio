@@ -186,8 +186,23 @@
   max-width: 100%;
   height: auto;
   z-index: 2;
-  animation: float 4s ease-in-out infinite;
+
+  animation: float 3.2s ease-in-out infinite;
+  will-change: transform;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 .hero-right::before {
   content: "";
@@ -226,7 +241,12 @@
   max-width: 380px;
   border-radius: 22px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+
+  animation: float 3.2s ease-in-out infinite;
+  will-change: transform;
 }
+
+
 
 .about-right p {
   font-size: 23px;
